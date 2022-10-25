@@ -4,7 +4,7 @@ import { useRef } from "react";
 import Card from "../ui/Card";
 import classes from "./NewMeetupForm.module.css";
 
-function NewMeetupForm() {
+function NewMeetupForm(props) {
     // connecting a form data by using ref in react
     const titleInputRef = useRef();
     const imageInputRef = useRef();
@@ -28,7 +28,7 @@ function NewMeetupForm() {
             description: enteredDescription,
         };
         // simply log that value using console.log to check soon we will send it to server 
-
+        props.onAddMeetup(meetupData);
     }
 
   return (
