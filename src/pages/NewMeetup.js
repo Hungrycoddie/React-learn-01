@@ -1,4 +1,7 @@
-import { useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
+// insted of useHistory v6 replaced with useNavigate 
+//https://reactrouter.com/en/v6.3.0/upgrading/v5
 
 import NewMeetupForm from "../components/meetups/NewMeetupForm";
 
@@ -16,7 +19,7 @@ function NewMeetupPage() {
         },
       } 
     ).then(() => {
-      navigate.replace('./');
+      navigate('/');
     });
   }
 
